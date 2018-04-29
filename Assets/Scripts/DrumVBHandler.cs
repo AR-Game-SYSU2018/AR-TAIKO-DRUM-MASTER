@@ -38,6 +38,7 @@ public class DrumVBHandler : MonoBehaviour, IVirtualButtonEventHandler
         {
             case "DrumA":
                 sphere.color = Color.red;
+
                 break;
             case "DrumB":
                 sphere.color = Color.green;
