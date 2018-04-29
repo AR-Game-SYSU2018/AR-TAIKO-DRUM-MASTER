@@ -1,0 +1,4 @@
+sceneSetups:
+- path: Assets/ARGame-Taiko.unity
+  isLoaded: 1
+  isActive: 1

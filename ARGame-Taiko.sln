@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ARGame-Taiko", "ARGame-Taiko.csproj", "{6860B835-B0EC-76E2-7304-D2742AAE6258}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ARGame-Taiko.Editor", "ARGame-Taiko.Editor.csproj", "{5D4E0E1A-339A-7EED-E5B9-C1C52E0657D6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6860B835-B0EC-76E2-7304-D2742AAE6258}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6860B835-B0EC-76E2-7304-D2742AAE6258}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6860B835-B0EC-76E2-7304-D2742AAE6258}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6860B835-B0EC-76E2-7304-D2742AAE6258}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5D4E0E1A-339A-7EED-E5B9-C1C52E0657D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D4E0E1A-339A-7EED-E5B9-C1C52E0657D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D4E0E1A-339A-7EED-E5B9-C1C52E0657D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D4E0E1A-339A-7EED-E5B9-C1C52E0657D6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
