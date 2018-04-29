@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class InstantiateHandler : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
+    public int[,] array;
+
+    // Use this for initialization
+    void Start () {
         StartInstantiate();
 	}
 	
@@ -28,7 +30,7 @@ public class InstantiateHandler : MonoBehaviour {
 
     void StartInstantiate()
     {
-        int[,] array = CreateRandomArray();
+        array = CreateRandomArray();
         InstantiatePrefabs(array, 0);
     }
 

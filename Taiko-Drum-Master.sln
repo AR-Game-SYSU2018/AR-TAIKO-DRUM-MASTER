@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Taiko-Drum-Master", "Taiko-Drum-Master.csproj", "{4C86B650-EF5E-5D13-010D-6738F6702542}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Taiko-Drum-Master.Editor", "Taiko-Drum-Master.Editor.csproj", "{0A3A42E2-E94D-3411-863C-52FB1658C00F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4C86B650-EF5E-5D13-010D-6738F6702542}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C86B650-EF5E-5D13-010D-6738F6702542}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C86B650-EF5E-5D13-010D-6738F6702542}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C86B650-EF5E-5D13-010D-6738F6702542}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0A3A42E2-E94D-3411-863C-52FB1658C00F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A3A42E2-E94D-3411-863C-52FB1658C00F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0A3A42E2-E94D-3411-863C-52FB1658C00F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0A3A42E2-E94D-3411-863C-52FB1658C00F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
