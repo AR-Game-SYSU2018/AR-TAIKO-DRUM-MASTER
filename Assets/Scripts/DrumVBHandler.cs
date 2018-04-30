@@ -8,7 +8,7 @@ public class DrumVBHandler : MonoBehaviour, IVirtualButtonEventHandler
 {
     private static int MAX_VALID_NUM_VB = 5;
     private static int RESET_PERIOD = 1000;
-    private static int HIT_DURATION = 300;
+    private static int HIT_DURATION = 400;
 
     private bool[] statusCode = {   false,false,false,false,
                                     false,false,false,false,

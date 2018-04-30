@@ -42,10 +42,10 @@ MonoBehaviour:
     y: 30
     width: 1920
     height: 947
-  m_MinSize: {x: 679, y: 492}
-  m_MaxSize: {x: 14002, y: 14042}
+  m_MinSize: {x: 683, y: 492}
+  m_MaxSize: {x: 14004, y: 14042}
   vertical: 0
-  controlID: 76
+  controlID: 99
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -207,10 +207,10 @@ MonoBehaviour:
     y: 0
     width: 1365
     height: 947
-  m_MinSize: {x: 404, y: 492}
+  m_MinSize: {x: 406, y: 492}
   m_MaxSize: {x: 10002, y: 14042}
   vertical: 1
-  controlID: 11
+  controlID: 100
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -231,10 +231,10 @@ MonoBehaviour:
     y: 0
     width: 1365
     height: 502
-  m_MinSize: {x: 404, y: 221}
-  m_MaxSize: {x: 8004, y: 4021}
+  m_MinSize: {x: 406, y: 221}
+  m_MaxSize: {x: 8006, y: 4021}
   vertical: 0
-  controlID: 12
+  controlID: 101
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -253,8 +253,8 @@ MonoBehaviour:
     y: 0
     width: 960
     height: 502
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 204, y: 221}
+  m_MaxSize: {x: 4004, y: 4021}
   m_ActualView: {fileID: 19}
   m_Panes:
   - {fileID: 19}
@@ -481,19 +481,19 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/NatureStarterKit2/Textures
+    - Assets/Scripts
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/NatureStarterKit2/Textures
+  - Assets/Scripts
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\Herrick\Desktop\Taiko-Drum-Master
   m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 300}
-    m_SelectedIDs: 82330000
-    m_LastClickedID: 13186
-    m_ExpandedIDs: 00000000a0280000d2280000d4280000fc2800005c2900007c290000aa290000042a0000803300008833000000ca9a3bffffff7f
+    m_SelectedIDs: 922d0000
+    m_LastClickedID: 11666
+    m_ExpandedIDs: 00000000b8290000022a0000062a0000482a0000002b0000262b00007c2b0000182c0000482d0000de2d000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -521,7 +521,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000a0280000d2280000d4280000fc2800005c2900007c290000aa290000
+    m_ExpandedIDs: 00000000b8290000022a0000062a0000482a0000002b0000262b00007c2b0000182c0000482d0000de2d0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -641,7 +641,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: a205f8ff8e06f8ff4808f8ffba74f9ffb275f9ff6c77f9ff9aaff9ffc4b0f9ff7eb2f9ffe495feff46edfeff9efbffff00000000
+    m_ExpandedIDs: 521affff341bffffee1cffffe640ffffd241ffff8c43ffff36b6ffff24b7ffffe2b8ffff9efbffff00000000122f000074340000083b0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -697,9 +697,9 @@ MonoBehaviour:
   m_isRotationLocked: 1
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -3.677652, y: 7.6213684, z: 21.659649}
+    m_Target: {x: -3.234325, y: -8.251076, z: 64.46003}
     speed: 2
-    m_Value: {x: -3.677652, y: 7.6213684, z: 21.659649}
+    m_Value: {x: -3.234325, y: -8.251076, z: 64.46003}
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -723,13 +723,13 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: -0.34684986, y: 0.021956073, z: -0.008122448, w: -0.9376284}
+    m_Target: {x: -0.34684983, y: 0.021956073, z: -0.008122448, w: -0.9376284}
     speed: 2
-    m_Value: {x: -0.34684986, y: 0.021956073, z: -0.008122448, w: -0.9376284}
+    m_Value: {x: -0.34684986, y: 0.021956075, z: -0.008122449, w: -0.9376285}
   m_Size:
-    m_Target: 102.16713
+    m_Target: 96.757065
     speed: 2
-    m_Value: 102.16713
+    m_Value: 96.757065
   m_Ortho:
     m_Target: 0
     speed: 2
