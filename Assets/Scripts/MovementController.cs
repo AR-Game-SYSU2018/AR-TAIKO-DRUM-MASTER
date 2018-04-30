@@ -12,7 +12,7 @@ public class MovementController : MonoBehaviour {
 	void Start () {
         rb = GetComponent<Rigidbody>();
         lastUpdateTime = System.DateTime.Now;
-        STEP = 1.56695f;
+        STEP = 1.1282f;
     }
 	
 	// Update is called once per frame

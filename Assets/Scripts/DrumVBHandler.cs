@@ -3,12 +3,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Vuforia;
+using ARGameTaiko;
+
 
 public class DrumVBHandler : MonoBehaviour, IVirtualButtonEventHandler
 {
     private static int MAX_VALID_NUM_VB = 5;
-    private static int RESET_PERIOD = 1000;
+    private static int RESET_PERIOD = 800;
     private static int HIT_DURATION = 400;
+
+    public bool isHit = false;
 
     private bool[] statusCode = {   false,false,false,false,
                                     false,false,false,false,
@@ -16,6 +20,12 @@ public class DrumVBHandler : MonoBehaviour, IVirtualButtonEventHandler
 
     private System.DateTime lastResetTime;
     private System.DateTime lastHitTime;
+
+    private int score = 0;
+    private System.DateTime gameStartTime;
+    private int[,] rdArr;
+    private int rdIndex = 0;
+    private bool isStart = false;
 
     GameObject drumA;
     GameObject drumAx;
@@ -31,15 +41,11 @@ public class DrumVBHandler : MonoBehaviour, IVirtualButtonEventHandler
     GameObject drumCw;
 
     GameObject scoreBoard;
-    Material sphere;
-
-    
 
     // Use this for initialization
     void Start()
     {
-        sphere = transform.GetChild(0).GetComponent<MeshRenderer>().material;
-        
+
         drumA = GameObject.Find("DrumA");
         drumAx = GameObject.Find("DrumAx");
         drumAy = GameObject.Find("DrumAy");
@@ -72,15 +78,28 @@ public class DrumVBHandler : MonoBehaviour, IVirtualButtonEventHandler
         invalidHit();
         lastResetTime = System.DateTime.Now;
         lastHitTime = System.DateTime.Now;
-    }
 
+
+    }
+    public void setIsHitFalse()
+    {
+        isHit = false;
+    }
+    public void SetStartTrue()
+    {
+        gameStartTime = InstantiateHandler.Instance.GetStartGameTime();
+        rdArr = InstantiateHandler.Instance.GetRandomArray();
+        isStart = true;
+    }
     // Update is called once per frame
     void Update()
     {
+
         System.DateTime tmp = System.DateTime.Now;
         if ((tmp - lastHitTime).TotalMilliseconds > HIT_DURATION)
             if ((tmp - lastResetTime).TotalMilliseconds > RESET_PERIOD)
-                invalidHit();        
+                invalidHit();
+        /*
         string s = "";
         for (int i = 0; i < 12; i++)
             if (statusCode[i])
@@ -89,12 +108,14 @@ public class DrumVBHandler : MonoBehaviour, IVirtualButtonEventHandler
                 s = s + "0";
 
         scoreBoard.GetComponent<TextMesh>().text = s;
+        */
+        scoreBoard.GetComponent<TextMesh>().text = "" + score;
 
     }
 
     public void OnButtonPressed(VirtualButtonAbstractBehaviour vb)
     {
-        switch(vb.VirtualButtonName)
+        switch (vb.VirtualButtonName)
         {
             case "DrumA":
                 //sphere.color = Color.red;
@@ -144,7 +165,7 @@ public class DrumVBHandler : MonoBehaviour, IVirtualButtonEventHandler
                 if (statusCode[10])
                     invalidHit();
                 break;
-            case "DrumCy":                
+            case "DrumCy":
                 statusCode[10] = true;
                 if (statusCode[9])
                     invalidHit();
@@ -217,25 +238,61 @@ public class DrumVBHandler : MonoBehaviour, IVirtualButtonEventHandler
                 //sphere.color = Color.black;
                 break;
         }
-        */        
+        */
 
     }
+    private void Score()
+    {
+        FindObjectOfType<SpawnerController>().faceDeath();
+        FindObjectOfType<SpawnerController>().setIsHit();
+        isHit = true;
+        score++;
+    }
+    private bool IsArrived(int which)
+    {
+        if (isHit)
+        {
+            return false;
+        }
+        int x = FindObjectOfType<SpawnerController>().WhichArrived();
+        if (x == which)
+            return true;
+        else
+            return false;
 
+    }
     private void validHit()
     {
-        if (statusCode[0] && statusCode[3])
-            sphere.color = Color.red;
-        else if (statusCode[4] && statusCode[7])
-            sphere.color = Color.blue;
-        else if (statusCode[8] && statusCode[11])
-            sphere.color = Color.yellow;
+        if (isStart)
+        {
+            if (statusCode[0] && statusCode[3])
+            {
+                if (IsArrived(1))
+                    Score();
+                //sphere.color = Color.red;
+            }
+            else if (statusCode[4] && statusCode[7])
+            {
+                if (IsArrived(2))
+                    Score();
+                //sphere.color = Color.blue;
+            }
+            else if (statusCode[8] && statusCode[11])
+            {
+                if (IsArrived(3))
+                    Score();
+                //sphere.color = Color.yellow;
+            }
+        }
     }
 
     private void invalidHit()
     {
         lastResetTime = System.DateTime.Now;
-        sphere.color = Color.white;
+        //sphere.color = Color.white;
         for (int i = 0; i < 12; i++)
             statusCode[i] = false;
     }
 }
+
+
