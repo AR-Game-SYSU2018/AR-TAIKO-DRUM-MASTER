@@ -5,14 +5,14 @@ using UnityEngine;
 public class MovementController : MonoBehaviour {
     
     private Rigidbody rb;
-    private const float STEP = 1.56695f;
+    private float STEP;
     private System.DateTime lastUpdateTime;
 
 	// Use this for initialization
 	void Start () {
         rb = GetComponent<Rigidbody>();
-        GetComponent<TextMesh>().text = "***";
         lastUpdateTime = System.DateTime.Now;
+        STEP = 1.56695f;
     }
 	
 	// Update is called once per frame
@@ -30,4 +30,6 @@ public class MovementController : MonoBehaviour {
         movement.Set(rb.position.x, rb.position.y, rb.position.z-(float)(step_));
         rb.MovePosition(movement);
     }
+
+    //publ
 }
